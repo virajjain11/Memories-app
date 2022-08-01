@@ -25,7 +25,6 @@ const reducers = (state = { isLoading: true, posts: [] }, action) => {
         posts: action.payload,
       };
     case FETCH_POST:
-      console.log("dispatching");
       return { ...state, post: action.payload };
 
     case FETCH_BY_SEARCH:

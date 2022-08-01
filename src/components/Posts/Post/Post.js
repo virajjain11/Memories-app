@@ -27,7 +27,7 @@ const Post = ({ post, setCurrentId }) => {
   // console.log("Post from post component", post);
   const Likes = () => {
     //1 Like, 2 Likes, You ad 2 others
-    console.log(post?.likes?.length, "post?.likes?.length");
+    // console.log(post?.likes?.length, "post?.likes?.length");
     if (post?.likes?.length > 0) {
       return post.likes.find(
         (userId) => userId === (user?.result?.googleId || user?.result?._id)

@@ -1,6 +1,10 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:4000" });
+// const API = axios.create({ baseURL: "http://localhost:4000" });
+const API = axios.create({
+  baseURL: "https://memories-server-1.herokuapp.com",
+});
+
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
     req.headers.Autherization = `Bearer ${
@@ -21,7 +25,7 @@ export const signIn = (formData) => API.post("/users/sign-in", formData);
 export const signUp = (formData) => API.post("/users/sign-up", formData);
 export const fetchPostsBySearch = (searchQuery) =>
   API.get(
-    `/posts/search?searchQuery=${searchQuery.search || "none"}&tags=${
+    `/posts/search/filter?searchQuery=${searchQuery.search || "none"}&tags=${
       searchQuery.tags
     }`
   );

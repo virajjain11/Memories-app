@@ -53,8 +53,6 @@ const Home = () => {
 
   const handleKey = (e) => {
     if (e.charCode === 13) {
-      console.log("you clicked enter");
-      // searchh
       searchPost();
     }
   };

@@ -22,7 +22,6 @@ const Navbar = () => {
 
   useEffect(() => {
     const token = user?.token;
-    console.log("token", token);
     // jwt expiry check
     if (token) {
       const decodedToken = decode(token);

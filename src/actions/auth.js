@@ -5,7 +5,7 @@ export const signUp = (formData, navigate) => async (dispatch) => {
   try {
     // sign in user
     const { data } = await api.signUp(formData);
-    console.log("dataaa!!!!!!", data);
+    // console.log("dataaa!!!!!!", data);
     dispatch({ type: AUTH, payload: data });
     navigate("/", { replace: true });
 
@@ -18,7 +18,7 @@ export const signIn = (formData, navigate) => async (dispatch) => {
   try {
     // login the user here
     const { data } = await api.signIn(formData);
-    console.log("sign-in data", data);
+    // console.log("sign-in data", data);
     dispatch({ type: AUTH, payload: data });
     // navigate.push("/");
     // navigate(-1);

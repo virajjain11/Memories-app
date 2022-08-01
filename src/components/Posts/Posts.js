@@ -8,8 +8,6 @@ export default function Posts({ currentId, setCurrentId }) {
   const classes = useStyles();
   const { posts } = useSelector((state) => state.posts);
 
-  console.log("aaaaa", posts);
-
   return !posts.length ? (
     <CircularProgress color="inherit" />
   ) : (

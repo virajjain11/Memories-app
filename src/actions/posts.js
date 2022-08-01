@@ -41,7 +41,7 @@ export const getPost = (id) => async (dispatch) => {
 export const createPost = (post) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-
+    // console.log("post", post);
     const { data } = await api.createPost(post);
     dispatch({ type: CREATE_NEW, payload: data });
     dispatch({ type: END_LOADING });
@@ -61,7 +61,7 @@ export const updatePost = (id, updatedPost) => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
   try {
-    console.log("insidee delete action", id);
+    // console.log("insidee delete action", id);
     await api.deletePost(id);
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
@@ -81,13 +81,11 @@ export const likePost = (id) => async (dispatch) => {
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    console.log("loading......", searchQuery);
     const {
       data: { data },
     } = await api.fetchPostsBySearch(searchQuery);
-    console.log("data.....", data);
     dispatch({ type: FETCH_BY_SEARCH, payload: data });
-    console.log(data);
+    // console.log(data);
     dispatch({ type: END_LOADING });
 
     // console.log(data);

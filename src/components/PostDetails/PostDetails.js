@@ -19,9 +19,9 @@ const Postdetails = () => {
   const { isLoading, post } = useSelector((state) => state.posts);
 
   useEffect(() => {
-    console.log(id);
+    // console.log(id);
     dispatch(getPost(id));
-    console.log("dispatch from useEffect");
+    // console.log("dispatch from useEffect");
   }, [id]);
 
   if (isLoading) {
