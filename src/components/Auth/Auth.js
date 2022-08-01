@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import React, { useState } from "react";
 import useStyles from "./styles";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+// import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Input from "./Input";
 import GoogleLogin from "react-google-login";
 import Icon from "./Icon";
@@ -78,7 +78,9 @@ const Auth = () => {
     <Container component="main" className={classes.Container} maxWidth="xs">
       <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
+          {
+            // <LockOutlinedIcon />
+          }
         </Avatar>
         <Typography variant="h5">{isSignUp ? "SIGN UP" : "SIGN IN"}</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
