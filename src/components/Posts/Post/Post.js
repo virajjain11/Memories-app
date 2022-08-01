@@ -69,7 +69,7 @@ const Post = ({ post, setCurrentId }) => {
             variant="h6"
             onClick={() => {
               setCurrentId(post._id);
-              console.log(post._id, "iddddd");
+              // console.log(post._id, "iddddd");
             }}
           >
             {post.name}
@@ -87,7 +87,7 @@ const Post = ({ post, setCurrentId }) => {
               size="small"
               onClick={() => {
                 setCurrentId(post._id);
-                console.log(post._id, "iddddd");
+                // console.log(post._id, "iddddd");
               }}
             >
               <MoreHorizIcon fontSize="medium" />
